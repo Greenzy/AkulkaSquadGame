@@ -72,7 +72,7 @@ void C_Engine::logic_thread(C_Engine* this_engine)
 	while (this_engine->GetStatus() == ENGINE_STATUS_READY)
 	{
 		// OnUpdate callback for example should be here
-		this_engine->m_Window.get()->Broadcast();
+		//this_engine->m_Window.get()->Broadcast();
 		printf("test\n");
 	}
 }
