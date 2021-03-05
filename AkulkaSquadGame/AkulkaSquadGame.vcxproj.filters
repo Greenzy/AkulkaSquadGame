@@ -2,5 +2,13 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="C_Render\C_Render.cpp" />
+    <ClCompile Include="C_AppWindow\C_AppWindow.cpp" />
+    <ClCompile Include="C_Engine\C_Engine.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C_Render\C_Render.h" />
+    <ClInclude Include="C_AppWindow\C_AppWindow.h" />
+    <ClInclude Include="C_Engine\C_Engine.h" />
   </ItemGroup>
 </Project>

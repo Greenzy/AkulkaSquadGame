@@ -19,7 +19,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="C_AppWindow\C_AppWindow.cpp" />
+    <ClCompile Include="C_Engine\C_Engine.cpp" />
+    <ClCompile Include="C_Render\C_Render.cpp" />
     <ClCompile Include="Main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C_AppWindow\C_AppWindow.h" />
+    <ClInclude Include="C_Engine\C_Engine.h" />
+    <ClInclude Include="C_Render\C_Render.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
