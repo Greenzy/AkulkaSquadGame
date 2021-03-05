@@ -40,7 +40,7 @@ C_AppWindow::C_AppWindow()
 
 	ShowWindow(m_HWND, SW_SHOW);
 
-	//m_d3d_render = std::make_unique<c_d3d_render>(m_hwnd);
+	m_d3d_render = std::make_unique<c_d3d_render>(m_HWND);
 
 	m_IsRun = true;
 }
@@ -53,6 +53,25 @@ C_AppWindow::~C_AppWindow()
 bool C_AppWindow::IsRun()
 {
 	return m_IsRun;
+}
+
+bool C_AppWindow::Broadcast()
+{
+	// this struct holds Windows event messages
+	MSG msg;
+
+	m_d3d_render.get()->RenderFrame();
+	// wait for the next message in the queue, store the result in 'msg'
+	while (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE) > 0)
+	{
+		// translate keystroke messages into the right format
+		TranslateMessage(&msg);
+
+		// send the message to the WindowProc function
+		DispatchMessage(&msg);
+	}
+
+	return true;
 }
 
 LRESULT CALLBACK WindowProc(HWND hwnd, UINT message, WPARAM wparam, LPARAM lparam)
