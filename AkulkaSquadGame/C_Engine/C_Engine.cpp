@@ -20,6 +20,10 @@ C_Engine::C_Engine()
 
 	m_Threads[THREAD_LOGIC] = std::thread(logic_thread, this);
 
+	Player = std::make_unique<C_Player>(1);
+	NPC = std::make_unique<C_NPC>(0);
+	
+	
 	const auto end_time = std::chrono::duration_cast<std::chrono::nanoseconds,
 		long long>(std::chrono::high_resolution_clock::now() - start_time).count();
 
@@ -73,6 +77,7 @@ void C_Engine::logic_thread(C_Engine* this_engine)
 	{
 		// OnUpdate callback for example should be here
 		this_engine->m_Window.get()->Broadcast();
-		printf("test\n");
+		printf("\nNpc id is %i with damage %i", this_engine->NPC.get()->GetID(), this_engine->NPC.get()->GetDamage());
+		printf("\nPlayer id is %i with damage %i", this_engine->Player.get()->GetID(), this_engine->Player.get()->GetDamage());
 	}
 }

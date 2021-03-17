@@ -24,7 +24,7 @@ c_d3d_render::c_d3d_render(HWND hwnd)
 
 
 	m_vb = CreateVertexBuffer();
-	m_vb->CreateSquare(200, 100, 100, 100);
+	//m_vb->CreateSquare(200, 100, 100, 100);
 
 
 	//create sprite
@@ -43,13 +43,13 @@ void c_d3d_render::m_some_render_foo(LPDIRECT3DDEVICE9 m_d3d_device)
 	// select which vertex format we are using
 	m_d3d_device->SetFVF(CUSTOMFVF);
 	// select the vertex buffer to display
-	m_d3d_device->SetStreamSource(0, m_vb->GetVertexBuffer(), 0, m_vb->GetVertexSize());
+	//m_d3d_device->SetStreamSource(0, m_vb->GetVertexBuffer(), 0, m_vb->GetVertexSize());
 
 	m_Sprite.get()->SetPosition(m_input.get()->Get_mouse_position().x -100, m_input.get()->Get_mouse_position().y-100);
-	m_vb->SetPosition(m_input.get()->Get_mouse_position().x + 100, m_input.get()->Get_mouse_position().y + 100);
+	//m_vb->SetPosition(m_input.get()->Get_mouse_position().x + 100, m_input.get()->Get_mouse_position().y + 100);
 
 	// copy the vertex buffer to the back buffer
-	m_d3d_device->DrawPrimitive(D3DPT_TRIANGLESTRIP, 0, 2);
+	//m_d3d_device->DrawPrimitive(D3DPT_TRIANGLESTRIP, 0, 2);
 	m_Sprite.get()->Draw();
 
 

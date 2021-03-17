@@ -23,6 +23,8 @@
     <ClCompile Include="C_Engine\C_Engine.cpp" />
     <ClCompile Include="C_InputSystem\c_control_setting\c_control_setting.cpp" />
     <ClCompile Include="C_InputSystem\c_input_system.cpp" />
+    <ClCompile Include="NPC\C_NPC\C_NPC.cpp" />
+    <ClCompile Include="NPC\C_Player\C_Player.cpp" />
     <ClCompile Include="C_Render\C_GameSprite\C_GameSprite.cpp" />
     <ClCompile Include="C_Render\C_Render.cpp" />
     <ClCompile Include="C_Render\C_VertexBuffer\C_VertexBuffer.cpp" />
@@ -33,6 +35,8 @@
     <ClInclude Include="C_Engine\C_Engine.h" />
     <ClInclude Include="C_InputSystem\c_control_setting\c_control_setting.h" />
     <ClInclude Include="C_InputSystem\c_input_system.h" />
+    <ClInclude Include="NPC\C_NPC\C_NPC.h" />
+    <ClInclude Include="NPC\C_Player\C_Player.h" />
     <ClInclude Include="C_Render\C_GameSprite\C_GameSprite.h" />
     <ClInclude Include="C_Render\C_Render.h" />
     <ClInclude Include="C_Render\C_VertexBuffer\C_VertexBuffer.h" />

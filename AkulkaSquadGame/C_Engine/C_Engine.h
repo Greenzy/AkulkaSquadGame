@@ -2,6 +2,7 @@
 #include <thread>
 #include <array>
 #include "../C_AppWindow/C_AppWindow.h"
+#include "../NPC/C_Player/C_Player.h"
 
 namespace core
 {
@@ -36,6 +37,8 @@ namespace core
 		static void logic_thread(C_Engine* this_engine);
 	private:
 		std::unique_ptr<C_AppWindow> m_Window;
+		std::unique_ptr<C_Player> Player;
+		std::unique_ptr<C_NPC> NPC;
 	};
 }
 
